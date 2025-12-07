@@ -1,3 +1,35 @@
-body{
-    background-color: rgb(212, 215, 218);
+body {
+  background-color: rgb(212, 215, 218);
+}
+
+.img-nav {
+  border-radius: 50%;
+  width: 100px;
+  height: 100px;
+}
+
+.a_link {
+  border-radius: 1rem;
+  transition: 0.2s;
+}
+
+.a_link:hover {
+  background-color: #b9dbff;
+  transform: scale(1.05);
+}
+
+.navbar-brand img {
+  transition: 0.3s ease;
+}
+
+.navbar.scrolled{
+    padding-top: 0.3rem;
+    padding-bottom: 0.3rem;
+}
+/* Cuando la navbar tenga la clase "scrolled", ocultamos SOLO el logo */
+.navbar.scrolled .navbar-brand img {
+  opacity: 0;
+  width: 0;
+  visibility: hidden;
+  height: 30px; /* opcional: reducir también el logo si aún lo muestras */
 }
