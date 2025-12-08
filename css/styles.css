@@ -3,9 +3,9 @@ body {
 }
 
 .img-nav {
-  border-radius: 50%;
-  width: 100px;
-  height: 100px;
+  border-radius: 100%;
+  width: 90px;
+  height: 90px;
 }
 
 .a_link {
@@ -23,10 +23,30 @@ body {
   transition: 0.3s ease;
 }
 
-.navbar.scrolled{
+/* Navbar cuando se hace scroll */
+.navbar.scrolled {
+    background-color: #24282c !important;
     padding-top: 0.3rem;
     padding-bottom: 0.3rem;
 }
+
+/* Texto blanco dentro del navbar */
+.navbar.scrolled .navbar-brand,
+.navbar.scrolled .navbar-brand small,
+.navbar.scrolled .nav-link {
+    color: #ffffff !important;
+}
+
+/* Color blanco para el ícono del botón móvil */
+.navbar.scrolled .navbar-toggler-icon {
+    filter: invert(1);
+}
+
+/* Opcional: color blanco del borde del toggler */
+.navbar.scrolled .navbar-toggler {
+    border-color: #ffffff;
+}
+
 /* Cuando la navbar tenga la clase "scrolled", ocultamos SOLO el logo */
 .navbar.scrolled .navbar-brand img {
   opacity: 0;
@@ -47,8 +67,4 @@ body {
   background-color: white;
   box-shadow: gray 0px 0px 10px 2px;
   transform: scale(1.05);
-}
-
-.banner-img{
-  height: 50px;
 }
