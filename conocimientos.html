@@ -8,10 +8,28 @@
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="css/cssRedSocial.css">
+    <link rel="stylesheet" href="css/loader.css">
+
     <script src="js/bootstrap.bundle.min.js"></script>
 </head>
 
 <body class="d-flex flex-column min-vh-100">
+    <div id="loader-overlay">
+        <div class="atom-loader">
+            <span class="center-text">Vin</span>
+
+            <div class="orbit orbit1">
+                <span class="electron"></span>
+            </div>
+            <div class="orbit orbit2">
+                <span class="electron"></span>
+            </div>
+            <div class="orbit orbit3">
+                <span class="electron"></span>
+            </div>
+        </div>
+    </div>
+
     <nav class="navbar navbar-expand-lg bg-body-tertiary  sticky-top shadow-lg ">
         <div class="container-fluid">
             <a class="navbar-brand" href="#">
@@ -34,7 +52,7 @@
             </div>
         </div>
     </nav>
-    
+
     <div class="container mt-4">
 
         <h1>Conocimientos</h1>
@@ -64,7 +82,7 @@
         </p>
 
     </div>
-<footer class="bg-dark text-white py-4 mt-auto">
+    <footer class="bg-dark text-white py-4 mt-auto">
         <div class="container py-4">
             <div class="row">
                 <div class="col-md-6">
@@ -116,6 +134,7 @@
             </div>
         </div>
     </footer>
+    <script src="js/load.js"></script>
 </body>
 
 </html>
