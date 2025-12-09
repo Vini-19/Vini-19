@@ -7,13 +7,21 @@ body {
   width: 90px;
   height: 90px;
 }
+
+.small-cel {
+  font-size: 1rem;
+}
+
 @media (max-width: 576px) {
   .img-nav {
-    width: 50px;
-    height: 50px;
+    width: 30px;
+    height: 30px;
   }
   .a-cel {
-    font-size: 0.9rem;
+    font-size: 0.80rem;
+  }
+  .small-cel{
+    font-size: 0.60rem;
   }
 }
 
