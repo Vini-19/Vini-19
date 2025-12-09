@@ -7,6 +7,14 @@ body {
   width: 90px;
   height: 90px;
 }
+@media (max-width: 576px) {
+  .img-nav {
+    width: 50px;
+    height: 50px;
+  }
+}
+
+
 
 .a_link {
   border-radius: 1rem;

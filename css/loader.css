@@ -1,10 +1,15 @@
+/* ---------------------------------------------------------
+   LOADER OVERLAY — Pantalla blanca mientras carga
+--------------------------------------------------------- */
 #loader-overlay {
     position: fixed;
     inset: 0;
     background: #ffffff;
+
     display: flex;
     justify-content: center;
     align-items: center;
+
     z-index: 9999;
     transition: opacity 0.4s ease;
 }
@@ -14,62 +19,133 @@
     pointer-events: none;
 }
 
-/* Tamaño del átomo (subí a 180 para que se note más) */
-.atom-loader {
+/* ---------------------------------------------------------
+   ATOM-DEMO — Contenedor general del átomo
+--------------------------------------------------------- */
+.atom-demo {
     position: relative;
-    width: 180px;
-    height: 180px;
+    width: 260px;
+    height: 260px;
 }
 
-/* Letra V central */
-.center-text {
+/* ---------------------------------------------------------
+   NUCLEUS — Núcleo AZUL brillante con la V detrás
+--------------------------------------------------------- */
+.nucleus {
     position: absolute;
     top: 50%;
     left: 50%;
+
+    width: 90px;
+    height: 90px;
+
+    /* Degradado azul tipo esfera */
+    background: radial-gradient(circle at 30% 30%, #cfe6ff, #007bff 60%, #003a80 100%);
+
+    border-radius: 50%;
     transform: translate(-50%, -50%);
-    font-size: 3.2rem;
-    font-weight: bold;
-    color: #007bff;
-    z-index: 10;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    /* Glow azul suave */
+    box-shadow: 0 0 20px rgba(0, 123, 255, 0.6);
 }
 
-/* Órbitas */
-.orbit {
+/* TEXTO V de fondo (marca de agua) */
+.nucleus-text {
+    font-size: 3rem;
+    font-weight: bold;
+    color: white;
     position: absolute;
+    z-index: 2;
+    text-shadow: 0 0 8px rgba(0, 123, 255, 0.6);
+}
+
+/* ---------------------------------------------------------
+   ORBIT-WRAPPER — Crea las elipses azules inclinadas
+--------------------------------------------------------- */
+.orbit-wrapper {
+    position: absolute;
+    top: 50%;
+    left: 50%;
     width: 100%;
     height: 100%;
-    border: 2px solid rgba(0, 123, 255, 0.7);
+
+    transform: translate(-50%, -50%);
+}
+
+/* Órbita 1 */
+.orbit-wrapper1 {
+    transform: translate(-50%, -50%) rotate(25deg) scaleY(0.55);
+}
+
+/* Órbita 2 */
+.orbit-wrapper2 {
+    transform: translate(-50%, -50%) rotate(-25deg) scaleY(0.55);
+}
+
+/* Órbita 3 */
+.orbit-wrapper3 {
+    transform: translate(-50%, -50%) rotate(90deg) scaleY(0.55);
+}
+
+/* ---------------------------------------------------------
+   ORBIT — Círculos azules que se vuelven elipses
+--------------------------------------------------------- */
+.orbit {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+
+    width: 100%;
+    height: 100%;
+
+    /* Borde azul tipo imagen */
+    border: 4px solid rgba(0, 123, 255, 0.9);
     border-radius: 50%;
-    animation: spinOrbit 1.4s linear infinite;
-    transform-origin: 50% 50%;
+
+    transform-origin: center center;
+    transform: translate(-50%, -50%);
+
+    animation: spinOrbit 3s linear infinite;
 }
 
-/* Distintas orientaciones de las órbitas */
-.orbit1 {
-    transform: rotate(0deg);
-}
-.orbit2 {
-    transform: rotate(60deg);
-}
-.orbit3 {
-    transform: rotate(120deg);
-}
+/* Velocidades distintas por órbita */
+.orbit-wrapper1 .orbit { animation-duration: 1.2s; }
+.orbit-wrapper2 .orbit { animation-duration: 1.6s; }
+.orbit-wrapper3 .orbit { animation-duration: 1.5s; }
 
-/* El electrón (puntito que se ve girar) */
+/* ---------------------------------------------------------
+   ELECTRON — Bolita azul moviéndose en la órbita
+--------------------------------------------------------- */
 .electron {
     position: absolute;
-    width: 14px;
-    height: 14px;
+
+    width: 16px;
+    height: 16px;
+
+    /* Pequeña esfera azul oscura */
+    background: #0053b8;
+
     border-radius: 50%;
-    background-color: #007bff;
-    /* Lo colocamos arriba del círculo */
-    top: -7px;                /* mitad del tamaño negativo */
+    box-shadow: 0 0 10px rgba(0, 123, 255, 0.9);
+
+    /* Posición exacta en el borde superior */
+    top: -8px;
     left: 50%;
     transform: translateX(-50%);
 }
 
-/* Animación de giro */
+/* ---------------------------------------------------------
+   ANIMACIÓN — Gira las órbitas completas
+--------------------------------------------------------- */
 @keyframes spinOrbit {
-    0%   { transform: rotate(0deg); }
-    100% { transform: rotate(360deg); }
+    0% {
+        transform: translate(-50%, -50%) rotate(0deg);
+    }
+    100% {
+        transform: translate(-50%, -50%) rotate(360deg);
+    }
 }
