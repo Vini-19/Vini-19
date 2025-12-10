@@ -2,6 +2,13 @@ body {
   background-color: rgb(212, 215, 218);
 }
 
+.intro-img-perfil{
+  border-radius: 100%;
+  width: 200px;
+  height: 200px;
+  box-shadow: gray 0px 0px 15px 3px;
+}
+
 .img-nav {
   border-radius: 100%;
   width: 90px;
@@ -12,9 +19,35 @@ body {
   font-size: 1rem;
 }
 
+@media (max-width: 1000px) {
+
+  .intro-img-perfil{
+    width: 250px !important;
+    height: 250px !important;
+  }
+  .img-nav {
+    width: 70px;
+    height: 70px;
+    transform: translateX(1.5rem);
+  }
+  .a-cel {
+    font-size: 1.1rem;
+  }
+  .small-cel{
+    font-size: 0.90rem;
+  }
+}
+
+
+
+
 @media (max-width: 576px) {
   .nav-container-img{
     margin-left: 0px;
+  }
+  .intro-img-perfil{
+    width: 200px !important;
+    height: 200px !important;
   }
   .img-nav {
     width: 50px;

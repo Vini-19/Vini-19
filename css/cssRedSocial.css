@@ -18,7 +18,7 @@
 }
 /* twitter*/
 .containerTwo:hover {
-  background-color: #00acee;
+  background-color: #38b9ec;
   transition-duration: 0.3s;
   transform: scale(1.2);
 }
@@ -30,7 +30,13 @@
 }
 /* Whatsapp*/
 .containerFour:hover {
-  background-color: #128c7e;
+  background-color: #06049c;
+  transition-duration: 0.3s;
+  transform: scale(1.2);
+}
+
+.containerFive:hover {
+  background-color: #000000;
   transition-duration: 0.3s;
   transform: scale(1.2);
 }
