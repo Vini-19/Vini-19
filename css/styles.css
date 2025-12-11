@@ -13,8 +13,9 @@ body {
 
 .intro-img-perfil {
   border-radius: 100%;
-  width: 200px;
-  height: 200px;
+  margin-bottom: 10rem;
+  width: 400px;
+  height: 400px;
   box-shadow: gray 0px 0px 15px 3px;
 }
 
@@ -23,7 +24,7 @@ body {
 }
 
 .container-intro {
-  margin-top: 16rem;
+  margin-top: 10rem;
   margin-bottom: 8rem;
 }
 
@@ -90,7 +91,7 @@ body {
 }
 
 .a_link:hover {
-  background-color: #d8e0e9;
+  background-color: #4f52f838;
   transform: scale(1.05);
 }
 
