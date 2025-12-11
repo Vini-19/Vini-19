@@ -2,11 +2,28 @@ body {
   background-color: rgb(212, 215, 218);
 }
 
-.intro-img-perfil{
+.intro-img-perfil {
   border-radius: 100%;
   width: 200px;
   height: 200px;
   box-shadow: gray 0px 0px 15px 3px;
+}
+
+.container-bk-intro {
+  color: white !important;
+  background: #6830b8;
+  background: linear-gradient(
+    90deg,
+    rgba(104, 48, 184, 1) 3%,
+    rgba(49, 2, 115, 1) 15%,
+    rgba(23, 1, 55, 1) 41%,
+    rgba(1, 1, 5, 1) 95%
+  );
+}
+
+.container-intro {
+  margin-top: 16rem;
+  margin-bottom: 21rem;
 }
 
 .img-nav {
@@ -20,8 +37,7 @@ body {
 }
 
 @media (max-width: 1000px) {
-
-  .intro-img-perfil{
+  .intro-img-perfil {
     width: 250px !important;
     height: 250px !important;
   }
@@ -30,22 +46,24 @@ body {
     height: 70px;
     transform: translateX(1.5rem);
   }
+  .container-intro {
+    margin-top: 8rem;
+    margin-bottom: 3.5rem;
+  }
+
   .a-cel {
     font-size: 1.1rem;
   }
-  .small-cel{
-    font-size: 0.90rem;
+  .small-cel {
+    font-size: 0.9rem;
   }
 }
 
-
-
-
 @media (max-width: 576px) {
-  .nav-container-img{
+  .nav-container-img {
     margin-left: 0px;
   }
-  .intro-img-perfil{
+  .intro-img-perfil {
     width: 200px !important;
     height: 200px !important;
   }
@@ -57,15 +75,13 @@ body {
   .a-cel {
     font-size: 0.95rem;
   }
-  .small-cel{
-    font-size: 0.80rem;
+  .small-cel {
+    font-size: 0.8rem;
   }
   .col-item-Uiverse {
     justify-content: center !important;
   }
 }
-
-
 
 .a_link {
   border-radius: 1rem;
@@ -75,7 +91,6 @@ body {
 .a_link:hover {
   background-color: #d8e0e9;
   transform: scale(1.05);
-
 }
 
 .navbar-brand img {
@@ -84,26 +99,26 @@ body {
 
 /* Navbar cuando se hace scroll */
 .navbar.scrolled {
-    background-color: #24282c !important;
-    padding-top: 0.3rem;
-    padding-bottom: 0.3rem;
+  background-color: #0a0513 !important;
+  padding-top: 0.3rem;
+  padding-bottom: 0.3rem;
 }
 
 /* Texto blanco dentro del navbar */
 .navbar.scrolled .navbar-brand,
 .navbar.scrolled .navbar-brand small,
 .navbar.scrolled .nav-link {
-    color: #ffffff !important;
+  color: #ffffff !important;
 }
 
 /* Color blanco para el ícono del botón móvil */
 .navbar.scrolled .navbar-toggler-icon {
-    filter: invert(1);
+  filter: invert(1);
 }
 
 /* Opcional: color blanco del borde del toggler */
 .navbar.scrolled .navbar-toggler {
-    border-color: #ffffff;
+  border-color: #ffffff;
 }
 
 /* Cuando la navbar tenga la clase "scrolled", ocultamos SOLO el logo */
@@ -114,10 +129,9 @@ body {
   height: 30px; /* opcional: reducir también el logo si aún lo muestras */
 }
 
-
 /* Estilos para las tarjetas con efecto hover */
 
-.card-info{
+.card-info {
   background-color: #cedceb;
   transition: 0.3s ease;
 }
