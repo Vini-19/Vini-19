@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="css/loader.css">
     <link rel="stylesheet" href="css/cssRedSocial.css">
+    <link rel="stylesheet" href="css/scroll-Panels.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
         integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
@@ -74,54 +75,87 @@
             </div>
         </div>
     </nav>
-    <div class="container-bk-intro">
+    <!-- ============================
+     SECCIÓN INTRO (ANIMADA)
+     Esta es la primera pantalla del portafolio.
+     Se marca como "panel" para aplicar animaciones 
+     con IntersectionObserver.
+=============================== -->
+    <div class="container-bk-intro panel" id="inicio">
+
+        <!-- Contenedor interno que centra el contenido -->
         <div class="container container-intro">
-            <div class="row g-1 position-relative ">
-                <div class="col-md-6 mb-md-0 p-md-4 align-items-center d-flex justify-content-center">
+
+            <div class="row g-1 position-relative">
+
+                <!-- ============================
+                 Columna de la imagen de perfil
+                 Se alinea al centro usando Flex
+            ============================= -->
+                <div class="col-md-6 mb-md-0 p-md-4 d-flex align-items-center justify-content-center">
+
+                    <!-- Imagen circular o rectangular según tu CSS -->
                     <img class="intro-img-perfil" src="img/img laboral/Foto Perfil.png" alt="imagen perfil"
-                        style="width: 400px; ; height: 400px; ;">
+                        style="width: 400px; height: 400px;">
                 </div>
+
+                <!-- ============================
+                 Columna de texto descriptivo
+            ============================= -->
                 <div class="col-md-6 p-4 ps-md-0">
+
                     <h3>Bienvenidos a mi portafolio web</h3>
+
                     <p>
                         Soy <strong>Marco Vinicio Sánchez Amaya</strong>, desarrollador en crecimiento con experiencia
-                        en
-                        <strong>C#, .NET, Razor Pages</strong> y la creación de aplicaciones web mantenibles.
-                        Actualmente
-                        fortalezco mis
-                        conocimientos en <strong>Microsoft Azure</strong> y me preparo para la certificación
-                        <strong>AZ-900</strong>, enfocándome en fundamentos de nube, seguridad y arquitectura.
+                        en <strong>C#, .NET, Razor Pages</strong> y la creación de aplicaciones web mantenibles.
+                        Actualmente fortalezco mis conocimientos en <strong>Microsoft Azure</strong> y me preparo para
+                        la
+                        certificación <strong>AZ-900</strong>, enfocándome en fundamentos de nube, seguridad y
+                        arquitectura.
+
                         <br><br>
-                        Tengo experiencia trabajando con <strong>SQL Server, MySQL</strong>, APIs, arquitectura MVC y
-                        control de versiones
-                        con <strong>Git/GitHub</strong>. Además, poseo bases en <strong>redes, ciberseguridad</strong> y
-                        administración
-                        de entornos Windows y Linux.
+
+                        Tengo experiencia trabajando con <strong>SQL Server, MySQL</strong>, APIs, arquitectura MVC
+                        y control de versiones con <strong>Git/GitHub</strong>. Además, poseo bases en
+                        <strong>redes, ciberseguridad</strong> y administración de entornos Windows y Linux.
+
                         <br><br>
-                        Aquí encontrarás mis proyectos, habilidades técnicas y el progreso de mi camino profesional como
-                        desarrollador.
+
+                        Aquí encontrarás mis proyectos, habilidades técnicas y el progreso
+                        de mi camino profesional como desarrollador.
                     </p>
+
+                    <!-- ============================
+                     ICONOS SOCIALES (LinkedIn, X, GitHub)
+                ============================= -->
                     <div class="col-md-6 d-flex justify-content-md-end align-items-center gap-3 col-item-Uiverse">
+
                         <!-- LinkedIn -->
                         <a class="socialContainer containerThree"
                             href="https://www.linkedin.com/in/marco-vinicio-s%C3%A1nchez-amaya-764412274/"
                             target="_blank">
+
                             <svg viewBox="0 0 448 512" class="socialSvg linkdinSvg">
                                 <path
                                     d="M100.28 448H7.4V148.9h92.88zM53.79 108.1C24.09 108.1 0 83.5 0 53.8a53.79 53.79 0 0 1 107.58 0c0 29.7-24.1 54.3-53.79 54.3zM447.9 448h-92.68V302.4c0-34.7-.7-79.2-48.29-79.2-48.29 0-55.69 37.7-55.69 76.7V448h-92.78V148.9h89.08v40.8h1.3c12.4-23.5 42.69-48.3 87.88-48.3 94 0 111.28 61.9 111.28 142.3V448z">
                                 </path>
                             </svg>
                         </a>
+
                         <!-- X (Twitter) -->
                         <a class="socialContainer containerFive" href="https://x.com/" target="_blank">
+
                             <svg viewBox="0 0 24 24" class="socialSvg xSvg">
                                 <path
                                     d="M18.244 2.25h3.308l-7.227 8.26 8.5 11.24H16.55l-5.403-7.07-6.19 7.07H1.65l7.73-8.82L1.5 2.25h6.09l4.853 6.47 5.801-6.47z">
                                 </path>
                             </svg>
                         </a>
+
                         <!-- GitHub -->
                         <a class="socialContainer containerFour" href="https://github.com/Vini-19" target="_blank">
+
                             <svg viewBox="0 0 16 16" class="socialSvg githubSvg">
                                 <path
                                     d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52 -.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07 -1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82a7.63 7.63 0 0 1 2-.27c.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.28.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0 0 16 8c0-4.42-3.58-8-8-8z">
@@ -129,160 +163,201 @@
                             </svg>
                         </a>
 
+                    </div> <!-- /col redes -->
 
-                    </div>
+                </div> <!-- /col texto -->
+            </div> <!-- /row -->
 
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="container mb-4 ">
-        <h2 class="text-center mb-4 mt-2">Conocimientos en area de desarrollo</h2>
-        <div class="row g-6 ">
-            <div class="col-12 col-md-6 col-lg-4 mt-2">
-                <div class="card card-info">
-                    <img src="img/db.png" class="card-img-top mx-auto d-block img-fluid" style="max-width: 100px;"
-                        alt="imagen">
-                    <div class="card-body">
-                        <h5 class="card-title">Base de datos</h5>
-                        <p class="card-text">Conocimientos en uso de base de datos relacionales como también el uso de
-                            las normalizaciones
-                        </p>
-                        <a href="conocimientos.html" class="btn btn-primary">Ver mas</a>
+        </div> <!-- /container -->
+    </div> <!-- /container-bk-intro -->
+    <!-- ==========================================
+     SECCIÓN CONOCIMIENTOS (ANIMADA)
+     Esta sección se animará igual que la intro
+     gracias a la clase "panel" y al JS scroll-anim.js
+=========================================== -->
+    <div class="panel container-bk-intro" id="conocimientos">
+
+        <div class="container mb-4">
+            <h2 class="text-center mb-4 mt-2">Conocimientos en área de desarrollo</h2>
+            <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-inner mb-4 " style="border-radius: 10px;">
+                    <div class="carousel-item active" data-bs-interval="1850">
+                        <img src="img/redes.png" class="d-block w-100 img-banner" alt="...">
+                    </div>
+                    <div class="carousel-item" data-bs-interval="1850">
+                        <img src="img/code.png" class="d-block w-100 img-banne" alt="...">
+                    </div>
+                    <div class="carousel-item" data-bs-interval="1850">
+                        <img src="img/cloud.png" class="d-block w-100 img-banne" alt="...">
                     </div>
                 </div>
             </div>
-            <div class="col-12 col-md-6 col-lg-4 mt-2">
-                <div class="card card-info">
-                    <img src="img/Code_vmc2015.png" class="card-img-top mx-auto d-block img-fluid"
-                        style="max-width: 100px;" alt="imagen">
-                    <div class="card-body">
-                        <h5 class="card-title">Programación</h5>
-                        <p class="card-text">Conceptos basicos de programación como tambien la logica de la misma,
-                            conocimientos en C#, .NET, Migraciones y desarrollo web HTML,CSS,JS</p>
-                        <a href="conocimientos.html" class="btn btn-primary">Ver mas</a>
+
+
+            <div class="row g-6">
+
+                <!-- ===== Card: Base de datos ===== -->
+                <div class="col-12 col-md-6 col-lg-4 mt-2">
+                    <div class="card card-info">
+                        <img src="img/db.png" class="card-img-top mx-auto d-block img-fluid" style="max-width: 100px;"
+                            alt="imagen base de datos">
+
+                        <div class="card-body">
+                            <h5 class="card-title">Base de datos</h5>
+                            <p class="card-text">
+                                Conocimientos en uso de bases de datos relacionales,
+                                así como en el manejo de normalizaciones.
+                            </p>
+                            <a href="conocimientos.html" class="btn btn-primary">Ver más</a>
+                        </div>
                     </div>
                 </div>
-            </div>
-            <div class="col-12 col-md-6 col-lg-4 mt-2">
-                <div class="card card-info">
-                    <img src="img/azure.png" class="card-img-top mx-auto d-block img-fluid" style="max-width: 100px;"
-                        alt="imagen">
-                    <div class="card-body">
-                        <h5 class="card-title">Azure</h5>
-                        <p class="card-text">Uso de herramientas de base de datos en la nube como despliegue de
-                            aplicaciones web con .NET y Entity Framework (EF)</p>
-                        <a href="conocimientos.html" class="btn btn-primary">Ver mas</a>
+
+                <!-- ===== Card: Programación ===== -->
+                <div class="col-12 col-md-6 col-lg-4 mt-2">
+                    <div class="card card-info">
+                        <img src="img/Code_vmc2015.png" class="card-img-top mx-auto d-block img-fluid"
+                            style="max-width: 100px;" alt="imagen programación">
+
+                        <div class="card-body">
+                            <h5 class="card-title">Programación</h5>
+                            <p class="card-text">
+                                Conceptos básicos de programación y lógica,
+                                conocimientos en C#, .NET, migraciones y desarrollo web
+                                (HTML, CSS, JavaScript).
+                            </p>
+                            <a href="conocimientos.html" class="btn btn-primary">Ver más</a>
+                        </div>
                     </div>
                 </div>
-            </div>
-        </div>
-    </div>
-    <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
-        <div class="carousel-inner mb-4">
-            <div class="carousel-item active" data-bs-interval="1850">
-                <img src="img/redes.png" class="d-block w-100 img-banner" alt="...">
-            </div>
-            <div class="carousel-item" data-bs-interval="1850">
-                <img src="img/code.png" class="d-block w-100 img-banne" alt="...">
-            </div>
-            <div class="carousel-item" data-bs-interval="1850">
-                <img src="img/cloud.png" class="d-block w-100 img-banne" alt="...">
-            </div>
-        </div>
-    </div>
+
+                <!-- ===== Card: Azure ===== -->
+                <div class="col-12 col-md-6 col-lg-4 mt-2">
+                    <div class="card card-info">
+                        <img src="img/azure.png" class="card-img-top mx-auto d-block img-fluid"
+                            style="max-width: 100px;" alt="imagen Azure">
+
+                        <div class="card-body">
+                            <h5 class="card-title">Azure</h5>
+                            <p class="card-text">
+                                Uso de herramientas de bases de datos en la nube y despliegue
+                                de aplicaciones web con .NET y Entity Framework (EF).
+                            </p>
+                            <a href="conocimientos.html" class="btn btn-primary">Ver más</a>
+                        </div>
+                    </div>
+                </div>
+
+            </div> <!-- /row -->
+        </div> <!-- /container -->
+    </div> <!-- /panel conocimientos -->
+
     <!-- area de redes y  -->
-
-    <div class="container mb-2 ">
-        <h1 class="text-center mb-4 ">Mas conocimientos</h1>
-        <div class="row g-1 bg-body-secondary position-relative shadow rounded-4 p-3">
-            <div class="col-md-6 mb-md-0 p-md-4 align-items-center d-flex justify-content-center">
-                <img src="img/Red2.png" class=" card-red-info " alt="...">
-            </div>
-            <div class="col-md-6 p-4 ps-md-0">
-                <h5 class="mt-0">Redes básicas a complejas</h5>
-                <p>Dominio de comandos en CMD para validar la conectividad entre equipos, así como la identificación de
-                    posibles
-                    problemas en las capas del modelo OSI a nivel físico y de configuración. También cuento con
-                    conocimientos en configuración básica de routers, incluyendo la segmentación de redes para equipos
-                    específicos. En mi CV puedes ver algunos certificados de cursos de CCNA que respaldan estas
-                    habilidades.</p>
-                <a href="cursos.html" class="stretched-link">Ver cursos</a>
+    <div class="panel mt-4" id="conocimientos">
+        <div class="container">
+            <h1 class="text-center text-light ">Mas conocimientos</h1>
+            <div class="row g-1 bg-body-secondary position-relative shadow rounded-4 p-3">
+                <div class="col-md-6 mb-md-0 p-md-4 align-items-center d-flex justify-content-center">
+                    <img src="img/Red2.png" class=" card-red-info " alt="...">
+                </div>
+                <div class="col-md-6 p-4 ps-md-0">
+                    <h5 class="">Redes básicas a complejas</h5>
+                    <p>Dominio de comandos en CMD para validar la conectividad entre equipos, así como la identificación
+                        de
+                        posibles
+                        problemas en las capas del modelo OSI a nivel físico y de configuración. También cuento con
+                        conocimientos en configuración básica de routers, incluyendo la segmentación de redes para
+                        equipos
+                        específicos. En mi CV puedes ver algunos certificados de cursos de CCNA que respaldan estas
+                        habilidades.</p>
+                    <a href="cursos.html" class="stretched-link">Ver cursos</a>
+                </div>
             </div>
         </div>
     </div>
+
     <!--Experiencia labora-->
-    <div class="container  mb-4">
-        <h1 class="text-center mb-4 mt-2">Experiencia laboral</h1>
-        <p>Tengo un año de experiencia en area de Soporte IT de sistemas de computo especificamente de puntos de venta
-            configuración de equipo completo hasta configuración basicas
-            para red y servidores NAS para respaldo de información empresarial.
-        </p>
+    <div class="panel mt-4 mb-4" id="conocimientos">
+        <div class="container">
+            <h1 class="text-center text-light">Experiencia laboral</h1>
+            <p class="text-center text-light">Tengo un año de experiencia en area de Soporte IT de sistemas de computo especificamente de puntos de
+                venta
+                configuración de equipo completo hasta configuración basicas
+                para red y servidores NAS para respaldo de información empresarial.
+            </p>
+            <p class="text-center text-light">Experiencia en capacitación de personal a nivel tecnico como teorico dependiendo al tipo de persona que
+                estoy
+                capacitando, igualmente experiencia en uso de base de datos en MySQL
+                para la gestión de productos y servicios en puntos de venta.
+            </p>
 
-        <p>Experiencia en capacitación de personal a nivel tecnico como teorico dependiendo al tipo de persona que estoy
-            capacitando, igualmente experiencia en uso de base de datos en MySQL
-            para la gestión de productos y servicios en puntos de venta.
-        </p>
+            <div class="row g-1 bg-body-secondary position-relative shadow rounded-4 p-3">
+                <div class="col-md-6 p-4">
+                    <h5 class="text-center">Soporte IT WIZPOS</h5>
+                    <p>En este apartado hablo sobre mi experiencia como agente de Soporte IT, en mi estadia como
+                        trabajador
+                        para <strong> WIZPOS SOFTWARE
+                            alrededor de 150 puntos de venta en diferentes empresas a nivel nacional,</strong> desde la
+                        configuración del equipo de computo
+                        hasta la configuración del software de punto de venta, así como la capacitación del personal
+                        encargado de el manejo del sistema.
+                    </p>
 
-        <div class="row g-1 bg-body-secondary position-relative shadow rounded-4 p-3">
-            <div class="col-md-6 p-4">
-                <h5 class="text-center">Soporte IT WIZPOS</h5>
-                <p>En este apartado hablo sobre mi experiencia como agente de Soporte IT, en mi estadia como trabajador
-                    para <strong> WIZPOS SOFTWARE
-                        alrededor de 150 puntos de venta en diferentes empresas a nivel nacional,</strong> desde la
-                    configuración del equipo de computo
-                    hasta la configuración del software de punto de venta, así como la capacitación del personal
-                    encargado de el manejo del sistema.
-                </p>
+                    <p>Manejo de base de datos a nivel de Implementaciones como tambien tecnico busqueda de información
+                        perdida o consultas basicas a complejas para reportes solicitados
+                        Tambien manejos y capacitación para servidor NAS para respaldo de información del cliente.
+                    </p>
+                    <p>Comunicación constante con el cliente para la solución de problemas técnicos y dudas sobre el uso
+                        del
+                        software.
+                        Además, he colaborado en la implementación de mejoras en los sistemas, asegurando que las
+                        necesidades del cliente sean atendidas de manera efectiva. Mi enfoque en la atención al cliente
+                        me
+                        ha permitido construir relaciones sólidas y duraderas, lo que resulta en una mayor satisfacción
+                        del
+                        usuario y un ambiente de trabajo más colaborativo.
+                    </p>
+                    <p>Tengo varias areas de conocimientos aplicadas en mi experiencia laboral como tambien proyecto
+                        creados
+                        guardados en mis reporsitorios GitHub puedes verlos en mi reporsitorios</p>
 
-                <p>Manejo de base de datos a nivel de Implementaciones como tambien tecnico busqueda de información
-                    perdida o consultas basicas a complejas para reportes solicitados
-                    Tambien manejos y capacitación para servidor NAS para respaldo de información del cliente.
-                </p>
-                <p>Comunicación constante con el cliente para la solución de problemas técnicos y dudas sobre el uso del
-                    software.
-                    Además, he colaborado en la implementación de mejoras en los sistemas, asegurando que las
-                    necesidades del cliente sean atendidas de manera efectiva. Mi enfoque en la atención al cliente me
-                    ha permitido construir relaciones sólidas y duraderas, lo que resulta en una mayor satisfacción del
-                    usuario y un ambiente de trabajo más colaborativo.
-                </p>
-                <p>Tengo varias areas de conocimientos aplicadas en mi experiencia laboral como tambien proyecto creados
-                    guardados en mis reporsitorios GitHub puedes verlos en mi reporsitorios</p>
-
-                <a href="https://github.com/Vini-19" target="_blank" class="btn btn-lg "
-                    style="background-color: black; color: white;">
-                    <i class="fa-brands fa-github"></i> GitHub
-                </a>
-            </div>
+                    <a href="https://github.com/Vini-19" target="_blank" class="btn btn-lg "
+                        style="background-color: black; color: white;">
+                        <i class="fa-brands fa-github"></i> GitHub
+                    </a>
+                </div>
 
 
-            <div class="col-md-6  mb-md-0 p-md-4  align-items-center d-flex justify-content-center">
-                <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
-                    <div class="carousel-inner mb-4">
-                        <div class="carousel-item active" data-bs-interval="1850">
-                            <img src="img/img laboral/Foto Perfil.png" class="d-block w-100 img-banner " alt="...">
+                <div class="col-md-6  mb-md-0 p-md-4  align-items-center d-flex justify-content-center">
+                    <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
+                        <div class="carousel-inner mb-4">
+                            <div class="carousel-item active" data-bs-interval="1850">
+                                <img src="img/img laboral/Foto Perfil.png" class="d-block w-100 img-banner " alt="...">
+                            </div>
+
+                            <div class="carousel-item" data-bs-interval="1850">
+                                <img src="img/img laboral/Implementaciones perfil.jpg" class="d-block w-100 img-banne "
+                                    alt="...">
+                            </div>
+
+                            <div class="carousel-item" data-bs-interval="1850">
+                                <img src="img/img laboral/Configuracion de NAS.jpg" class="d-block w-100 img-banne "
+                                    alt="...">
+                            </div>
+                            <div class="carousel-item" data-bs-interval="1850">
+                                <img src="img/img laboral/implementaciones 2.jpg" class="d-block w-100 img-banne"
+                                    alt="...">
+                            </div>
+                            <div class="carousel-item" data-bs-interval="1850">
+                                <img src="img/img laboral/imple de equipo 2.jpg" class="d-block w-100 img-banne"
+                                    alt="...">
+                            </div>
+
                         </div>
-
-                        <div class="carousel-item" data-bs-interval="1850">
-                            <img src="img/img laboral/Implementaciones perfil.jpg" class="d-block w-100 img-banne "
-                                alt="...">
-                        </div>
-
-                        <div class="carousel-item" data-bs-interval="1850">
-                            <img src="img/img laboral/Configuracion de NAS.jpg" class="d-block w-100 img-banne "
-                                alt="...">
-                        </div>
-                        <div class="carousel-item" data-bs-interval="1850">
-                            <img src="img/img laboral/implementaciones 2.jpg" class="d-block w-100 img-banne" alt="...">
-                        </div>
-                        <div class="carousel-item" data-bs-interval="1850">
-                            <img src="img/img laboral/imple de equipo 2.jpg" class="d-block w-100 img-banne" alt="...">
-                        </div>
-
                     </div>
                 </div>
-            </div>
 
+            </div>
         </div>
     </div>
     <footer class="bg-dark text-white py-4 mt-auto">
@@ -339,6 +414,7 @@
         </div>
     </footer>
     <script src="js/load.js"></script>
+    <script src="js/scroll-panels.js"></script>
 </body>
 
 </html>

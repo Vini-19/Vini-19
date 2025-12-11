@@ -1,5 +1,14 @@
+/* Fondo global de toda la página */
 body {
-  background-color: rgb(212, 215, 218);
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(
+    90deg,
+    rgba(104, 48, 184, 1) 3%,
+    rgba(49, 2, 115, 1) 15%,
+    rgba(23, 1, 55, 1) 41%,
+    rgba(1, 1, 5, 1) 95%
+  );
 }
 
 .intro-img-perfil {
@@ -11,19 +20,11 @@ body {
 
 .container-bk-intro {
   color: white !important;
-  background: #6830b8;
-  background: linear-gradient(
-    90deg,
-    rgba(104, 48, 184, 1) 3%,
-    rgba(49, 2, 115, 1) 15%,
-    rgba(23, 1, 55, 1) 41%,
-    rgba(1, 1, 5, 1) 95%
-  );
 }
 
 .container-intro {
   margin-top: 16rem;
-  margin-bottom: 21rem;
+  margin-bottom: 8rem;
 }
 
 .img-nav {
@@ -47,7 +48,7 @@ body {
     transform: translateX(1.5rem);
   }
   .container-intro {
-    margin-top: 8rem;
+    margin-top: 3rem;
     margin-bottom: 3.5rem;
   }
 

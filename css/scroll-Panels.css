@@ -1,0 +1,35 @@
+/* ============================================
+   ANIMACIÓN BASE DE TODAS LAS SECCIONES .panel
+=============================================== */
+
+.panel {
+
+    /* Para que el scroll-snap alinee cada sección al inicio */
+    scroll-snap-align: start;
+
+    /* Animación inicial (se oculta y baja ligeramente) */
+    opacity: 0;
+    background: transparent;
+    transform: translateY(60px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+
+}
+
+
+
+/* Cuando la sección ENTRA al viewport */
+.panel.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Cuando la sección SALE por arriba */
+.panel.hide-up {
+    opacity: 0;
+    transform: translateY(-60px);
+}
+
+/* ============================================
+   OVERRIDE SOLO PARA LA SECCIÓN INTRO
+   (para que no deje ese bloque vacío abajo)
+=============================================== */
