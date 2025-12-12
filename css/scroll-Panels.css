@@ -15,8 +15,6 @@
 
 }
 
-
-
 /* Cuando la sección ENTRA al viewport */
 .panel.show {
     opacity: 1;
@@ -29,7 +27,15 @@
     transform: translateY(-60px);
 }
 
-/* ============================================
-   OVERRIDE SOLO PARA LA SECCIÓN INTRO
-   (para que no deje ese bloque vacío abajo)
-=============================================== */
+
+/* Móvil */
+@media (max-width: 768px) {
+    .panel {
+        transform: translateY(30px); /* menos desplazamiento */
+        transition: opacity 0.3s ease, transform 0.3s ease; /* más rápido */
+    }
+
+    .panel.hide-up {
+        transform: translateY(-30px);
+    }
+}

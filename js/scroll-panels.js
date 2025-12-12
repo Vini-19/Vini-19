@@ -24,7 +24,7 @@ const observer = new IntersectionObserver(
     });
   },
   {
-    threshold: 0.4, // porcentaje visible para activar (ajusta si quieres)
+    threshold: 0.3, // porcentaje visible para activar (ajusta si quieres)
   }
 );
 
