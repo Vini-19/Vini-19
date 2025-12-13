@@ -145,7 +145,6 @@ body {
 /* Estilos para las tarjetas con efecto hover */
 
 .card-info {
-  background-color: #cedceb;
   transition: 0.3s ease;
 }
 
