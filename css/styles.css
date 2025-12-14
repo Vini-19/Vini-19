@@ -10,6 +10,169 @@ body {
   );
 }
 
+/* Estilos para la imagen de perfil en la sección de introducción */
+/* ===========================================
+   ATOM NAV — TODO AJUSTABLE CON VARIABLES
+=========================================== */
+.atom-demo-nav {
+  /* ---- TAMAÑOS (lo importante) ---- */
+  --atom: 80px; /* tamaño total del icono */
+  --nucleus: 28px; /* tamaño del núcleo */
+  --electron: 6px; /* tamaño del electrón */
+  --v-size: 1rem; /* tamaño de la letra V */
+
+  /* ---- ÓRBITAS ---- */
+  --orbit-border: 1px; /* grosor del borde de órbita */
+  --orbit-scaleY: 0.55; /* qué tan elipse es (0.55 como tenías) */
+  --orbit-rot1: 25deg;
+  --orbit-rot2: -25deg;
+  --orbit-rot3: 90deg;
+
+  /* ---- SOMBRAS / GLOW ---- */
+  --nucleus-glow: 20px;
+  --v-glow: 8px;
+  --electron-glow: 10px;
+
+  /* ---- COLORES ---- */
+  --orbit-color: rgba(0, 123, 255, 0.9);
+  --glow-color: rgba(0, 123, 255, 0.6);
+  --electron-color: #0053b8;
+
+  /* ---- ANIMACIÓN ---- */
+  --spd1: 3.2s;
+  --spd2: 3.6s;
+  --spd3: 3.5s;
+
+  position: relative;
+  width: var(--atom);
+  height: var(--atom);
+}
+
+/* ---------------------------------------------------------
+   NÚCLEO
+--------------------------------------------------------- */
+.nucleus-nav {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+
+  width: var(--nucleus);
+  height: var(--nucleus);
+
+  background: radial-gradient(
+    circle at 30% 30%,
+    #cfe6ff,
+    #007bff 60%,
+    #003a80 100%
+  );
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  box-shadow: 0 0 var(--nucleus-glow) var(--glow-color);
+}
+
+.nucleus-text-nav {
+  font-size: var(--v-size);
+  font-weight: bold;
+  color: white;
+  position: absolute;
+  z-index: 2;
+  text-shadow: 0 0 var(--v-glow) var(--glow-color);
+}
+
+/* ---------------------------------------------------------
+   ORBIT WRAPPER
+--------------------------------------------------------- */
+.orbit-wrapper-nav {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 100%;
+  height: 100%;
+  transform: translate(-50%, -50%);
+}
+
+/* Órbitas inclinadas */
+.orbit-wrapper1-nav {
+  transform: translate(-50%, -50%) rotate(var(--orbit-rot1))
+    scaleY(var(--orbit-scaleY));
+}
+.orbit-wrapper2-nav {
+  transform: translate(-50%, -50%) rotate(var(--orbit-rot2))
+    scaleY(var(--orbit-scaleY));
+}
+.orbit-wrapper3-nav {
+  transform: translate(-50%, -50%) rotate(var(--orbit-rot3))
+    scaleY(var(--orbit-scaleY));
+}
+
+/* ---------------------------------------------------------
+   ORBIT (círculo que gira)
+--------------------------------------------------------- */
+.orbit-nav {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+
+  width: 100%;
+  height: 100%;
+
+  border: var(--orbit-border) solid var(--orbit-color);
+  border-radius: 50%;
+
+  transform-origin: center;
+  transform: translate(-50%, -50%);
+
+  animation: spinOrbit 3s linear infinite;
+}
+
+/* Velocidades */
+.orbit-wrapper1-nav .orbit-nav {
+  animation-duration: var(--spd1);
+}
+.orbit-wrapper2-nav .orbit-nav {
+  animation-duration: var(--spd2);
+}
+.orbit-wrapper3-nav .orbit-nav {
+  animation-duration: var(--spd3);
+}
+
+/* ---------------------------------------------------------
+   ELECTRON
+--------------------------------------------------------- */
+.electron-nav {
+  position: absolute;
+  width: var(--electron);
+  height: var(--electron);
+
+  background: var(--electron-color);
+  border-radius: 50%;
+  box-shadow: 0 0 var(--electron-glow) var(--orbit-color);
+
+  /* antes era top:-3px; ahora es proporcional */
+  top: calc(var(--electron) / -2);
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+/* ---------------------------------------------------------
+   ANIMACIÓN
+--------------------------------------------------------- */
+@keyframes spinOrbit {
+  0% {
+    transform: translate(-50%, -50%) rotate(0deg);
+  }
+  100% {
+    transform: translate(-50%, -50%) rotate(360deg);
+  }
+}
+
+/*FIN DE ESTILOS DE ORBITA DE LOGO  */
+
 .intro-img-perfil {
   border-radius: 100%;
   margin-bottom: 10rem;
@@ -27,12 +190,6 @@ body {
   margin-bottom: 8rem;
 }
 
-.img-nav {
-  border-radius: 100%;
-  width: 90px;
-  height: 90px;
-}
-
 .small-cel {
   font-size: 1rem;
 }
@@ -41,17 +198,23 @@ body {
   .panel {
     margin-bottom: 0rem;
   }
-
   .intro-img-perfil {
     margin-top: 0rem;
     margin-bottom: 0rem;
     width: 250px !important;
     height: 250px !important;
   }
-  .img-nav {
-    width: 70px;
-    height: 70px;
-    transform: translateX(1.5rem);
+  .atom-demo-nav {
+    --atom: 40px;
+    --nucleus: 14px;
+    --electron: 4px;
+    --v-size: 0.5rem;
+
+    --orbit-border: 1px; /* si querés más fino: 0.8px */
+    --nucleus-glow: 14px;
+    --v-glow: 6px;
+    --electron-glow: 8px;
+    transform: translate(7px);
   }
   .container-intro {
     margin-top: 1rem;
@@ -62,29 +225,6 @@ body {
   }
   .small-cel {
     font-size: 0.9rem;
-  }
-}
-
-@media (max-width: 576px) {
-  .nav-container-img {
-    margin-left: 0px;
-  }
-  .intro-img-perfil {
-    margin-top: 0rem;
-    margin-bottom: 0rem;
-    width: 200px !important;
-    height: 200px !important;
-  }
-  .img-nav {
-    width: 50px;
-    height: 50px;
-    transform: translateX(1rem);
-  }
-  .a-cel {
-    font-size: 0.95rem;
-  }
-  .small-cel {
-    font-size: 0.8rem;
   }
   .col-item-Uiverse {
     justify-content: center !important;
@@ -101,7 +241,7 @@ body {
   transform: scale(1.05);
 }
 
-.navbar-brand img {
+.navbar-brand .atom-demo-nav {
   transition: 0.3s ease;
 }
 
@@ -135,7 +275,7 @@ body {
 }
 
 /* Cuando la navbar tenga la clase "scrolled", ocultamos SOLO el logo */
-.navbar.scrolled .navbar-brand img {
+.navbar.scrolled .navbar-brand .atom-demo-nav {
   opacity: 0;
   width: 0;
   visibility: hidden;
