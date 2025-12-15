@@ -10,6 +10,57 @@ body {
   );
 }
 
+/* Navbar cuando se hace scroll */
+.navbar.scrolled {
+  background-color: #0a0513ee !important;
+  padding-top: 0.3rem;
+  padding-bottom: 0.3rem;
+}
+
+/* Texto blanco dentro del navbar */
+.navbar.scrolled .navbar-brand,
+.navbar.scrolled .navbar-brand small,
+.navbar.scrolled .nav-link {
+  color: #ffffff !important;
+}
+
+/*el icono del nav para desplegar el menu*/
+.navbar-toggler-icon {
+  filter: invert(1);
+}
+
+/* Color blanco para el ícono del botón móvil */
+.navbar.scrolled .navbar-toggler-icon {
+  filter: invert(1);
+}
+
+/* Opcional: color blanco del borde del toggler */
+.navbar.scrolled .navbar-toggler {
+  border-color: #ffffff;
+}
+
+/* Cuando la navbar tenga la clase "scrolled", ocultamos SOLO el logo */
+.navbar.scrolled .navbar-brand .atom-demo-nav {
+  opacity: 0;
+  width: 0;
+  visibility: hidden;
+  height: 30px; /* opcional: reducir también el logo si aún lo muestras */
+}
+
+.a_link {
+  border-radius: 1rem;
+  transition: 0.2s;
+}
+
+.a_link:hover {
+  background-color: #4f52f838;
+  transform: scale(1.05);
+}
+
+.navbar-brand .atom-demo-nav {
+  transition: 0.3s ease;
+}
+
 /* Estilos para la imagen de perfil en la sección de introducción */
 /* ===========================================
    ATOM NAV — TODO AJUSTABLE CON VARIABLES
@@ -194,15 +245,28 @@ body {
   font-size: 1rem;
 }
 
-@media (max-width: 1000px) {
+/* Estilos para las tarjetas con efecto hover */
+
+.card-info {
+  transition: 0.3s ease;
+}
+
+.card-info:hover {
+  background-color: white;
+  box-shadow: rgb(0, 81, 255) 0px 0px 10px 2px;
+  transform: scale(1.05);
+}
+
+
+@media (max-width: 750px) {
   .panel {
     margin-bottom: 0rem;
   }
   .intro-img-perfil {
     margin-top: 0rem;
     margin-bottom: 0rem;
-    width: 250px !important;
-    height: 250px !important;
+    width: 200px !important;
+    height: 200px !important;
   }
   .atom-demo-nav {
     --atom: 40px;
@@ -231,65 +295,39 @@ body {
   }
 }
 
-.a_link {
-  border-radius: 1rem;
-  transition: 0.2s;
-}
+@media (min-width: 750px) and (max-width: 992px) {
+  .panel {
+    margin-bottom: 0rem;
+  }
+  .intro-img-perfil {
+    margin-top: 0rem;
+    margin-bottom: 0rem;
+    width: 300px !important;
+    height: 300px !important;
+  }
+  .atom-demo-nav {
+    --atom: 80px;
+    --nucleus: 25px;
+    --electron: 6px;
+    --v-size: 0.8rem;
 
-.a_link:hover {
-  background-color: #4f52f838;
-  transform: scale(1.05);
-}
-
-.navbar-brand .atom-demo-nav {
-  transition: 0.3s ease;
-}
-
-/* Navbar cuando se hace scroll */
-.navbar.scrolled {
-  background-color: #0a0513ee !important;
-  padding-top: 0.3rem;
-  padding-bottom: 0.3rem;
-}
-
-/* Texto blanco dentro del navbar */
-.navbar.scrolled .navbar-brand,
-.navbar.scrolled .navbar-brand small,
-.navbar.scrolled .nav-link {
-  color: #ffffff !important;
-}
-
-/*el icono del nav para desplegar el menu*/
-.navbar-toggler-icon {
-  filter: invert(1);
-}
-
-/* Color blanco para el ícono del botón móvil */
-.navbar.scrolled .navbar-toggler-icon {
-  filter: invert(1);
-}
-
-/* Opcional: color blanco del borde del toggler */
-.navbar.scrolled .navbar-toggler {
-  border-color: #ffffff;
-}
-
-/* Cuando la navbar tenga la clase "scrolled", ocultamos SOLO el logo */
-.navbar.scrolled .navbar-brand .atom-demo-nav {
-  opacity: 0;
-  width: 0;
-  visibility: hidden;
-  height: 30px; /* opcional: reducir también el logo si aún lo muestras */
-}
-
-/* Estilos para las tarjetas con efecto hover */
-
-.card-info {
-  transition: 0.3s ease;
-}
-
-.card-info:hover {
-  background-color: white;
-  box-shadow: gray 0px 0px 10px 2px;
-  transform: scale(1.05);
+    --orbit-border: 1px; /* si querés más fino: 0.8px */
+    --nucleus-glow: 14px;
+    --v-glow: 6px;
+    --electron-glow: 8px;
+    transform: translate(7px);
+  }
+  .container-intro {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+  }
+  .a-cel {
+    font-size: 1.1rem;
+  }
+  .small-cel {
+    font-size: 0.9rem;
+  }
+  .col-item-Uiverse {
+    transform: translate(4rem);
+  }
 }

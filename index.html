@@ -105,23 +105,13 @@
             </div>
         </div>
     </nav>
-    <!-- ============================
-     SECCIÓN INTRO (ANIMADA)
-     Esta es la primera pantalla del portafolio.
-     Se marca como "panel" para aplicar animaciones 
-     con IntersectionObserver.
-=============================== -->
-    <div class="panel container-bk-intro" id="inicio">
+    <div class="panel container-bk-intro">
 
         <!-- Contenedor interno que centra el contenido -->
         <div class="container container-intro">
 
             <div class="row g-1 position-relative">
 
-                <!-- ============================
-                 Columna de la imagen de perfil
-                 Se alinea al centro usando Flex
-            ============================= -->
                 <div class="col-md-6 mb-md-0 p-md-4 d-flex align-items-center justify-content-center">
 
                     <!-- Imagen circular o rectangular según tu CSS -->
@@ -199,12 +189,7 @@
 
         </div> <!-- /container -->
     </div> <!-- /container-bk-intro -->
-    <!-- ==========================================
-     SECCIÓN CONOCIMIENTOS (ANIMADA)
-     Esta sección se animará igual que la intro
-     gracias a la clase "panel" y al JS scroll-anim.js
-=========================================== -->
-    <div class="panel container-bk-intro" id="conocimientos">
+    <div class="panel container-bk-intro">
 
         <div class="container mb-4">
             <h2 class="text-center mb-4 mt-2">Conocimientos en área de desarrollo</h2>
@@ -281,7 +266,7 @@
         </div> <!-- /container -->
     </div> <!-- /panel conocimientos -->
 
-    <div class="panel mt-2" id="certificaciones">
+    <div class="panel mt-2">
         <div class="container">
             <h1 class="text-center text-light mb-4">Certificaciones y Cursos mas destacados</h1>
 
@@ -290,7 +275,7 @@
                 <!-- Certificación 1 -->
                 <div class="col-md-4">
                     <div class="card h-100 shadow rounded-4 text-center card-info">
-                        <div class="card-body">
+                        <div class="card-body ">
                             <img src="img/azure.png" class="mb-3" width="70" alt="Azure">
                             <h5 class="card-title">Azure Fundamentals (AZ-900)</h5>
                             <p class="card-text small text-muted">
@@ -426,7 +411,7 @@
 
 
     <!--Experiencia labora-->
-    <div class="panel mt-1 mb-3" id="conocimientos">
+    <div class="panel mt-1 mb-3">
         <div class="container">
             <h1 class="text-center text-light">Experiencia laboral</h1>
             <p class="text-center text-light">
@@ -467,6 +452,9 @@
                     <a href="https://github.com/Vini-19" target="_blank" class="btn btn-lg "
                         style="background-color: black; color: white;">
                         <i class="fa-brands fa-github"></i> GitHub
+                    </a>
+                    <a class="btn-su">
+
                     </a>
                 </div>
 
