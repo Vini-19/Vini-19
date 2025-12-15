@@ -1,0 +1,63 @@
+
+/* ===============================
+   SKILL BOX (SIN FONDO)
+================================ */
+.vini-skillbox{
+  margin-top: 1rem;
+}
+
+/* Título */
+.vini-skillbox__title{
+  font-weight: 700;
+  margin-bottom: .75rem;
+  color: #0f172a; /* negro azulado */
+}
+
+/* ===============================
+   SKILL BAR (MINIMAL)
+================================ */
+.vini-skillbar{
+  margin-bottom: .9rem;
+}
+
+.vini-skillbar:last-child{
+  margin-bottom: 0;
+}
+
+/* Texto superior */
+.vini-skillbar__top{
+  display: flex;
+  justify-content: space-between;
+  font-size: .9rem;
+  margin-bottom: .35rem;
+  color: #1e293b;
+}
+
+.vini-skillbar__pct{
+  font-weight: 600;
+  color: #2563eb; /* azul */
+}
+
+/* Línea base */
+.vini-skillbar__track{
+  height: 6px;
+  background: #e5e7eb; /* gris claro */
+  border-radius: 999px;
+  overflow: hidden;
+}
+
+/* Barra animada */
+.vini-skillbar__fill{
+  width: 0%;
+  height: 100%;
+  background: #2563eb; /* azul limpio */
+  border-radius: 999px;
+  transition: width 1.2s ease;
+}
+
+/* Responsive */
+@media (max-width: 768px){
+  .vini-skillbar__top{
+    font-size: .85rem;
+  }
+}

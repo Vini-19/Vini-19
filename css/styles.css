@@ -261,6 +261,18 @@ body {
   transform: scale(1.05);
 }
 
+#cursos {
+  scroll-margin-top: 155px; /* ajusta según altura del navbar */
+}
+#Experiencia {
+  scroll-margin-top: 200px; /* ajusta según altura del navbar */
+}
+
+#about {
+  scroll-margin-top: 100px; /* ajusta según altura del navbar */
+}
+
+
 @media (max-width: 599px) {
   .panel {
     margin-bottom: 0rem;
