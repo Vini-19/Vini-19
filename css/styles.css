@@ -232,6 +232,10 @@ body {
   box-shadow: rgb(73, 48, 216) 0px 0px 15px 3px;
 }
 
+.div-intro-text {
+  margin-top: 2rem;
+}
+
 .container-bk-intro {
   color: white !important;
 }
@@ -242,7 +246,7 @@ body {
 }
 
 .small-cel {
-  font-size: 1rem;
+  font-size: 0.85rem;
 }
 
 /* Estilos para las tarjetas con efecto hover */
@@ -257,11 +261,15 @@ body {
   transform: scale(1.05);
 }
 
-
 @media (max-width: 599px) {
   .panel {
     margin-bottom: 0rem;
   }
+
+  .div-intro-text {
+    margin-top: 3rem;
+  }
+
   .intro-img-perfil {
     margin-top: 0rem;
     margin-bottom: 0rem;
@@ -288,7 +296,7 @@ body {
     font-size: 1.1rem;
   }
   .small-cel {
-    font-size: 0.9rem;
+    font-size: 0.7rem;
   }
   .col-item-Uiverse {
     justify-content: center !important;
