@@ -77,12 +77,10 @@
 @media (max-width: 768px) {
 
   .container-intro-proyects{
-    margin-top: 10rem;
-    margin-bottom: 0.4rem;
+    margin-top: 6rem;
+    margin-bottom: 6rem;
   }
-  .container-bk-proyects{
 
-  }
   .vini-skillbar__top {
     font-size: 0.85rem;
   }
