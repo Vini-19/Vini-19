@@ -98,7 +98,7 @@
 
             <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
                 <div class="navbar-nav">
-                    <a class="nav-link  text-light active a_link" href="Proyectos.html">Proyectos</a>
+                    <a class="nav-link  text-light active a_link" href="#proyecto-intro">Proyectos</a>
                     <a class="nav-link  text-light active a_link" href="index.html#cursos">Cursos</a>
                     <a class="nav-link  text-light active a_link" href="index.html#Experiencia">Experiencia</a>
                     <a class="nav-link  text-light active a_link" href="index.html">About</a>
@@ -106,8 +106,8 @@
             </div>
         </div>
     </nav>
-    <div class="panel container-bk-intro">
-        <div class="container container-intro">
+    <div id="proyecto-intro" class="panel container-bk-intro-proyects">
+        <div class="container container-intro-proyects">
             <div class="row justify-content-center">
                 <div class="col-lg-8 col-md-10 py-5 text-center">
 
@@ -146,18 +146,20 @@
         </div>
     </div>
 
-
-    <div class="panel container">
-        <div class="container">
-            <div class="row g-1 bg-body-secondary position-relative shadow rounded-4 p-3">
+    <div class="panel container-bk-proyects ">
+        <div class="container mt-3">
+            <div class="row g-3 bg-body-secondary position-relative shadow rounded-4 p-3">
 
                 <!-- INFO + SKILLS -->
                 <div class="col-md-6 p-4">
-                    <h2>Gestor de Licencias con cobros - Razor Pages (.NET)</h2>
-                    <p>
-                        Aplicación web para gestionar cobros con licencias de sistemas para cada cliente facilitando el
-                        trabajo para cada area de cobros administración y Soporte
+                    <h2 class="mb-2">Gestor de Licencias con cobros - Razor Pages (.NET)</h2>
+
+                    <p class="text-muted mb-3">
+                        Aplicación web para gestionar cobros con licencias de sistemas para cada cliente, facilitando el
+                        trabajo en
+                        las áreas de cobros, administración y soporte.
                     </p>
+
                     <!-- SKILLS -->
                     <div class="vini-skillbox">
                         <h6 class="vini-skillbox__title">Habilidades aplicadas en este proyecto</h6>
@@ -204,10 +206,11 @@
                     </div>
                 </div>
 
-                <!-- CAROUSEL -->
-                <div class="col-md-6 mb-md-0 p-md-4 align-items-center d-flex justify-content-center">
+                <!-- CAROUSEL + BOTÓN -->
+                <div class="col-md-6 p-4 d-flex flex-column justify-content-center">
+
                     <div id="carouselExampleSlidesOnly" class="carousel slide w-100" data-bs-ride="carousel">
-                        <div class="carousel-inner mb-4">
+                        <div class="carousel-inner">
 
                             <div class="carousel-item active">
                                 <img src="img/proyectos/demo_licencia/Primer Pantalla.png"
@@ -235,14 +238,124 @@
                             </div>
 
                         </div>
-                        <div class="d-flex justify-content-center">
-                            <a href="https://github.com/Vini-19/Soporte_Demo_Licencias.git" target="_blank"
-                                rel="noopener" class="btn btn-dark btn-sm mt-2">
-                                <i class="fa-brands fa-github me-2"></i> Ver proyecto en GitHub
-                            </a>
+                    </div>
+
+                    <!-- Botón fuera del carousel -->
+                    <div class="d-flex justify-content-center mt-3">
+                        <a href="https://github.com/Vini-19/Soporte_Demo_Licencias.git" target="_blank" rel="noopener"
+                            class="btn btn-dark btn-sm">
+                            <i class="fa-brands fa-github me-2"></i> Ver proyecto en GitHub
+                        </a>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <div class="panel container-bk-proyects ">
+        <div class="container mt-3">
+            <div class="row g-3 bg-body-secondary position-relative shadow rounded-4 p-3">
+
+                <!-- INFO + SKILLS -->
+                <div class="col-md-6 p-4">
+                    <h2 class="mb-2">Gestor de Licencias con cobros - Razor Pages (.NET)</h2>
+
+                    <p class="text-muted mb-3">
+                        Aplicación web para gestionar cobros con licencias de sistemas para cada cliente, facilitando el
+                        trabajo en
+                        las áreas de cobros, administración y soporte.
+                    </p>
+
+                    <!-- SKILLS -->
+                    <div class="vini-skillbox">
+                        <h6 class="vini-skillbox__title">Habilidades aplicadas en este proyecto</h6>
+
+                        <div class="vini-skillbar" data-skill data-percent="85">
+                            <div class="vini-skillbar__top">
+                                <span>Razor Pages</span>
+                                <span class="vini-skillbar__pct">85%</span>
+                            </div>
+                            <div class="vini-skillbar__track">
+                                <div class="vini-skillbar__fill"></div>
+                            </div>
                         </div>
 
+                        <div class="vini-skillbar" data-skill data-percent="90">
+                            <div class="vini-skillbar__top">
+                                <span>C# / .NET</span>
+                                <span class="vini-skillbar__pct">90%</span>
+                            </div>
+                            <div class="vini-skillbar__track">
+                                <div class="vini-skillbar__fill"></div>
+                            </div>
+                        </div>
+
+                        <div class="vini-skillbar" data-skill data-percent="80">
+                            <div class="vini-skillbar__top">
+                                <span>Entity Framework Core</span>
+                                <span class="vini-skillbar__pct">80%</span>
+                            </div>
+                            <div class="vini-skillbar__track">
+                                <div class="vini-skillbar__fill"></div>
+                            </div>
+                        </div>
+
+                        <div class="vini-skillbar" data-skill data-percent="75">
+                            <div class="vini-skillbar__top">
+                                <span>SQL Server</span>
+                                <span class="vini-skillbar__pct">75%</span>
+                            </div>
+                            <div class="vini-skillbar__track">
+                                <div class="vini-skillbar__fill"></div>
+                            </div>
+                        </div>
                     </div>
+                </div>
+
+                <!-- CAROUSEL + BOTÓN -->
+                <div class="col-md-6 p-4 d-flex flex-column justify-content-center">
+
+                    <div id="carouselExampleSlidesOnly" class="carousel slide w-100" data-bs-ride="carousel">
+                        <div class="carousel-inner">
+
+                            <div class="carousel-item active">
+                                <img src="img/proyectos/demo_licencia/Primer Pantalla.png"
+                                    class="d-block w-100 img-banner" alt="Primer Pantalla">
+                            </div>
+
+                            <div class="carousel-item">
+                                <img src="img/proyectos/demo_licencia/Editar Licencias.png"
+                                    class="d-block w-100 img-banner" alt="Editar Licencias">
+                            </div>
+
+                            <div class="carousel-item">
+                                <img src="img/proyectos/demo_licencia/Estado de licencia.png"
+                                    class="d-block w-100 img-banner" alt="Estado de licencia">
+                            </div>
+
+                            <div class="carousel-item">
+                                <img src="img/proyectos/demo_licencia/Listado Licencia.png"
+                                    class="d-block w-100 img-banner" alt="Listado Licencia">
+                            </div>
+
+                            <div class="carousel-item">
+                                <img src="img/proyectos/demo_licencia/Modal licencias.png"
+                                    class="d-block w-100 img-banner" alt="Modal licencias">
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <!-- Botón fuera del carousel -->
+                    <div class="d-flex justify-content-center mt-3">
+                        <a href="https://github.com/Vini-19/Soporte_Demo_Licencias.git" target="_blank" rel="noopener"
+                            class="btn btn-dark btn-sm">
+                            <i class="fa-brands fa-github me-2"></i> Ver proyecto en GitHub
+                        </a>
+                    </div>
+
                 </div>
 
             </div>

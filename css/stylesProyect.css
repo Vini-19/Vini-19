@@ -1,45 +1,63 @@
+/* ===============================
+   CONTAINER proyects
+================================ */
+#proyecto-intro {
+  scroll-margin-top: 10px;
+}
+
+.container-bk-intro-proyects {
+  color: white !important;
+}
+.container-intro-proyects { 
+  margin-top: 12rem;
+  margin-bottom: 12rem;
+}
+.container-bk-proyects {
+  margin-top: 1rem;
+  margin-bottom: 3rem;
+}
 
 /* ===============================
    SKILL BOX (SIN FONDO)
 ================================ */
-.vini-skillbox{
+.vini-skillbox {
   margin-top: 1rem;
 }
 
 /* Título */
-.vini-skillbox__title{
+.vini-skillbox__title {
   font-weight: 700;
-  margin-bottom: .75rem;
+  margin-bottom: 0.75rem;
   color: #0f172a; /* negro azulado */
 }
 
 /* ===============================
    SKILL BAR (MINIMAL)
 ================================ */
-.vini-skillbar{
-  margin-bottom: .9rem;
+.vini-skillbar {
+  margin-bottom: 0.9rem;
 }
 
-.vini-skillbar:last-child{
+.vini-skillbar:last-child {
   margin-bottom: 0;
 }
 
 /* Texto superior */
-.vini-skillbar__top{
+.vini-skillbar__top {
   display: flex;
   justify-content: space-between;
-  font-size: .9rem;
-  margin-bottom: .35rem;
+  font-size: 0.9rem;
+  margin-bottom: 0.35rem;
   color: #1e293b;
 }
 
-.vini-skillbar__pct{
+.vini-skillbar__pct {
   font-weight: 600;
   color: #2563eb; /* azul */
 }
 
 /* Línea base */
-.vini-skillbar__track{
+.vini-skillbar__track {
   height: 6px;
   background: #e5e7eb; /* gris claro */
   border-radius: 999px;
@@ -47,7 +65,7 @@
 }
 
 /* Barra animada */
-.vini-skillbar__fill{
+.vini-skillbar__fill {
   width: 0%;
   height: 100%;
   background: #2563eb; /* azul limpio */
@@ -56,8 +74,8 @@
 }
 
 /* Responsive */
-@media (max-width: 768px){
-  .vini-skillbar__top{
-    font-size: .85rem;
+@media (max-width: 768px) {
+  .vini-skillbar__top {
+    font-size: 0.85rem;
   }
 }
